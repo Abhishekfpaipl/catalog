@@ -1,5 +1,6 @@
 <template lang="">
-    <div class=" position-fixed w-100 bg-white" style="bottom: 0; z-index:1;">
+     <nav class="navbar fixed-bottom navbar-light bg-light" :class="{ 'navbar-hidden': navbarHidden }">
+      <div class=" position-fixed w-100 bg-white" style="bottom: 0; z-index:1;">
       <div class=" nav-bottom justify-content-evenly" style="height: 63px; padding: 0 18px;">
        <div class="items">
           <routerLink to="/CreatePage"  :class="{'text-danger' : currentRoute ==='CreatePage' }" style="text-decoration:none;color:black;">
@@ -20,14 +21,36 @@
         
       </div>
     </div>
+    </nav>
+    
   </template>
 <script>
 export default {
   name: 'BottomNav',
+  data() {
+    return {
+      prevScroll: window.pageYOffset,
+      navbarHidden: false
+    };
+  },
   computed: {
     currentRoute() {
       return this.$route.name;
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const currentScroll = window.pageYOffset;
+      if (this.prevScroll > currentScroll) {
+        this.navbarHidden = false;
+      } else {
+        this.navbarHidden = true;
+      }
+      this.prevScroll = currentScroll;
+    },
   }
 };
 </script>
@@ -43,6 +66,17 @@ export default {
   gap: 1.5rem;
   justify-content: center;
   background: #F6F6F6;
+}
+
+.navbar {
+  background-color: #f1f1f1;
+  height: 80px;
+  transition: transform 0.5s;
+  transform: translateY(0);
+}
+
+.navbar-hidden {
+  transform: translateY(100%);
 }
 </style>
   
