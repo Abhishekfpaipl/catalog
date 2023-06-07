@@ -1,6 +1,6 @@
 <template>
     <nav >
-        <div class="nav d-flex justify-content-between nav-tabs py-2" style="font-size: 13px; font-weight: 500;" id="nav-tab" role="tablist">
+        <div class="nav d-flex justify-content-evenly nav-tabs py-2" style="font-size: 13px; font-weight: 500;" id="nav-tab" role="tablist">
             <a class="nav-link " :class="active === 'Create' ? 'active' : ''" href="/CreatePage">Create</a>
             <a class="nav-link " :class="active === 'Draft' ? 'active' : ''" href="/DraftPage">Draft</a>
             <a class="nav-link " :class="active === 'Live' ? 'active' : ''" href="/LivePage">Live</a>
