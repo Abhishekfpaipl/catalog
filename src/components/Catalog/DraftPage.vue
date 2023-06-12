@@ -36,52 +36,21 @@
                         </div>
                         <div class="offcanvas-body">
 
-                            <!-- basic  detials -->
-                            <!-- <div class="card">
-                                <div class="accordion accordion-flush" id="accordionFlushExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <div class="accordion-button collapsed" data-bs-toggle="collapse"
-                                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                                aria-controls="flush-collapseOne">
-                                                <div class="me-5 rounded-circle d-flex align-items-center justify-content-center"
-                                                    style="border:1px solid green;height:50px;width: 50px;"><span>1</span>
-                                                </div>
-                                                <div>Basic Details</div>
-                                            </div>
-                                        </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                            data-bs-parent="#accordionFlushExample">
-                                            
-                                            <div class="accordion-body">
-                                                <TextInputs class="w-100 " name="Article No." type="text" :modelValue="activeCatelog.oid" design="floating">
-                                                </TextInputs>
-                                                <TextInputs class="w-100 " name="Catalog Name" type="text" :modelValue="activeCatelog.name"
-                                                    design="floating"></TextInputs>
-                                                <TextInputs class="w-100 " name="Whole Selling Price" type="text" :modelValue="activeCatelog.price"
-                                                    design="floating">
-                                                </TextInputs>
-                                                <TextInputs class="w-100 " name="MOQ" type="text" :modelValue="activeCatelog.moq" design="floating">
-                                                </TextInputs>
-                                                <TextInputs class="w-100 " name="No. of Pieces" :modelValue="activeCatelog.pieces" type="text"
-                                                    design="floating"></TextInputs>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
 
                             <div class="card">
                                 <div class="accordion accordion-flush" id="accordionFlushAreas">
-                                    <div class="accordion-item" v-for="(area, index) in areas" :key="index">
+                                    <!-- <div class="accordion-item" v-for="(catalog, dex) in activeCatelog" :key="dex"> -->
+                                    <div class="accordion-item" v-for="(area, index) in activeCatelog.areas" :key="index">
                                         <h2 class="accordion-header">
+                                            {{ activeCatelog.oid }}
                                             <div class="accordion-button collapsed" data-bs-toggle="collapse"
                                                 :data-bs-target="'#flush-collapse' + index" aria-expanded="false"
                                                 :aria-controls="'flush-collapse' + index">
                                                 <div class="d-flex align-items-center">
 
                                                     <div class="me-5 rounded-circle d-flex align-items-center justify-content-center"
-                                                        style="border:1px solid green;height:50px;width: 50px;">{{ index +
+                                                        style="border:1px solid green;height:50px;width: 50px;">{{ index
+                                                            +
                                                             1 }}</div>
 
                                                     <i class="bi bi-1-circle fs-2 text-success"></i>
@@ -115,6 +84,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
 
@@ -172,9 +142,9 @@ export default {
         activeCatelog() {
             return this.$store.getters.getCatelog;
         },
-        areas() {
-            return this.$store.getters.getAreas
-        }
+        // areas() {
+        //     return this.$store.getters.getAreas
+        // }
 
     },
     methods: {

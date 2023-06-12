@@ -67,7 +67,7 @@
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div  class="form-floating ">
-                                                <input value="" type="floating" name="name" class="form-control "
+                                                <input value="" type="inline" name="name" class="form-control "
                                                     id="floatingInput" placeholder="name" required>
                                                 <label for="floatingInput">Fabric no</label>
                                             </div>
