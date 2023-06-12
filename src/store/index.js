@@ -108,27 +108,27 @@ export default createStore({
             sections: [
               {
                 name: "Article No.",
-                value: '',
+                value: '4544',
               },
 
               {
                 name: "Catalog Name",
-                value: '',
+                value: 'cheese',
               },
 
               {
-                name: "Whole Selling Price",
-                value: '',
+                name: "Selling Price",
+                value: '120',
               },
 
               {
                 name: "MOQ",
-                value: '',
+                value: '10',
               },
 
               {
                 name: "No. of Pieces",
-                value: '',
+                value: '230',
               },
             ]
           },
@@ -138,43 +138,43 @@ export default createStore({
             'sections': [
               {
                 name: "Fabric Cost",
-                value: "",
+                value: "210",
               },
               {
-                name: "Process Outsourcing Cost",
-                value: "",
+                name: "Processing",
+                value: "32",
               },
               {
-                name: "Cutting Rate",
-                value: "",
+                name: "Cutting",
+                value: "52",
               },
               {
-                name: "Single Needle Rate",
-                value: "",
+                name: "Single Needle",
+                value: "55",
               },
               {
-                name: "Assessories Cost",
-                value: "",
+                name: "Assessories ",
+                value: "26",
               },
               {
-                name: "Over Locking Rate",
-                value: "",
+                name: "Over Locking ",
+                value: "57",
               },
               {
-                name: "Finishing Rate",
-                value: "",
+                name: "Finishing ",
+                value: "25",
               },
               {
-                name: "Packaging Rate",
-                value: "",
+                name: "Packaging ",
+                value: "54",
               },
               {
                 name: "Other Cost",
-                value: "",
+                value: "55",
               },
               {
                 name: "Fabricating Rate",
-                value: "",
+                value: "69",
               },
 
             ]
@@ -182,6 +182,10 @@ export default createStore({
           {
             'title': "Color Variations",
             'type': "ColorAdd",
+            colors: [
+              { name: "Color", value: "" },
+              { name: "Color",value: "" },
+            ],
           },
           {
             'title': "Size Variations",
@@ -193,19 +197,19 @@ export default createStore({
             'sections': [
               {
                 name: "select Fabric",
-                value: '',
+                value: 'Cheese ',
               },
               {
                 name: "Pana (Inch)",
-                value: '',
+                value: '69',
               },
               {
                 name: "FC / Unit",
-                value: '',
+                value: '200',
               },
               {
                 name: "Unit",
-                value: '',
+                value: '10',
               },
             ]
           },
@@ -214,28 +218,28 @@ export default createStore({
             'type': "TextInput",
             'sections': [
               {
-                name: "Select Stretchability",
-                value: '',
+                name: " Stretchability",
+                value: '44',
               },
               {
-                name: "Select Occasion",
-                value: '',
+                name: " Occasion",
+                value: 'Diwali',
               },
               {
-                name: "Select Pattern",
-                value: '',
+                name: " Pattern",
+                value: 'tiger',
               },
               {
-                name: "Select Neckline",
-                value: '',
+                name: " Neckline",
+                value: 'deep neck',
               },
               {
-                name: "select Length Type",
-                value: '',
+                name: " Length Type",
+                value: 'null',
               },
               {
-                name: "select Sleeve Type",
-                value: '',
+                name: " Sleeve Type",
+                value: 'full',
               },
             ]
           },
@@ -264,162 +268,162 @@ export default createStore({
         oid: '01-20-23189',
         price: '190',
         moq: '800',
-        areas: [
-          {
-            title: "Basic Details",
-            type: "TextInput",
-            sections: [
-              {
-                name: "Article No.",
-                value: '',
-              },
+        // areas: [
+        //   {
+        //     title: "Basic Details",
+        //     type: "TextInput",
+        //     sections: [
+        //       {
+        //         name: "Article No.",
+        //         value: '',
+        //       },
 
-              {
-                name: "Catalog Name",
-                value: '',
-              },
+        //       {
+        //         name: "Catalog Name",
+        //         value: '',
+        //       },
 
-              {
-                name: "Whole Selling Price",
-                value: '',
-              },
+        //       {
+        //         name: "Whole Selling Price",
+        //         value: '',
+        //       },
 
-              {
-                name: "MOQ",
-                value: '',
-              },
+        //       {
+        //         name: "MOQ",
+        //         value: '',
+        //       },
 
-              {
-                name: "No. of Pieces",
-                value: '',
-              },
-            ]
-          },
-          {
-            'title': "Cost Pricing",
-            'type': "TextInput",
-            'sections': [
-              {
-                name: "Fabric Cost",
-                value: "",
-              },
-              {
-                name: "Process Outsourcing Cost",
-                value: "",
-              },
-              {
-                name: "Cutting Rate",
-                value: "",
-              },
-              {
-                name: "Single Needle Rate",
-                value: "",
-              },
-              {
-                name: "Assessories Cost",
-                value: "",
-              },
-              {
-                name: "Over Locking Rate",
-                value: "",
-              },
-              {
-                name: "Finishing Rate",
-                value: "",
-              },
-              {
-                name: "Packaging Rate",
-                value: "",
-              },
-              {
-                name: "Other Cost",
-                value: "",
-              },
-              {
-                name: "Fabricating Rate",
-                value: "",
-              },
+        //       {
+        //         name: "No. of Pieces",
+        //         value: '',
+        //       },
+        //     ]
+        //   },
+        //   {
+        //     'title': "Cost Pricing",
+        //     'type': "TextInput",
+        //     'sections': [
+        //       {
+        //         name: "Fabric Cost",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Process Outsourcing Cost",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Cutting Rate",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Single Needle Rate",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Assessories Cost",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Over Locking Rate",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Finishing Rate",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Packaging Rate",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Other Cost",
+        //         value: "",
+        //       },
+        //       {
+        //         name: "Fabricating Rate",
+        //         value: "",
+        //       },
 
-            ]
-          },
-          {
-            'title': "Color Variations",
-            'type': "ColorAdd",
-          },
-          {
-            'title': "Size Variations",
-            'type': "SizeAdd",
-          },
-          {
-            'title': "Fabric Detials",
-            'type': "TextInput",
-            'sections': [
-              {
-                name: "select Fabric",
-                value: '',
-              },
-              {
-                name: "Pana (Inch)",
-                value: '',
-              },
-              {
-                name: "FC / Unit",
-                value: '',
-              },
-              {
-                name: "Unit",
-                value: '',
-              },
-            ]
-          },
-          {
-            'title': "Attributes",
-            'type': "TextInput",
-            'sections': [
-              {
-                name: "Select Stretchability",
-                value: '',
-              },
-              {
-                name: "Select Occasion",
-                value: '',
-              },
-              {
-                name: "Select Pattern",
-                value: '',
-              },
-              {
-                name: "Select Neckline",
-                value: '',
-              },
-              {
-                name: "select Length Type",
-                value: '',
-              },
-              {
-                name: "select Sleeve Type",
-                value: '',
-              },
-            ]
-          },
-          {
-            'title': "Searching Details",
-            'type': "Search",
-          },
-          {
-            'title': "Fabricator Instructions",
-            'type': "Instruction",
-          },
-          {
-            'title': "Production Instructions",
-            'type': "Instruction",
-          },
-          {
-            'title': "QC Instructions",
-            'type': "Instruction",
-          },
+        //     ]
+        //   },
+        //   {
+        //     'title': "Color Variations",
+        //     'type': "ColorAdd",
+        //   },
+        //   {
+        //     'title': "Size Variations",
+        //     'type': "SizeAdd",
+        //   },
+        //   {
+        //     'title': "Fabric Detials",
+        //     'type': "TextInput",
+        //     'sections': [
+        //       {
+        //         name: "select Fabric",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "Pana (Inch)",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "FC / Unit",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "Unit",
+        //         value: '',
+        //       },
+        //     ]
+        //   },
+        //   {
+        //     'title': "Attributes",
+        //     'type': "TextInput",
+        //     'sections': [
+        //       {
+        //         name: "Select Stretchability",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "Select Occasion",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "Select Pattern",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "Select Neckline",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "select Length Type",
+        //         value: '',
+        //       },
+        //       {
+        //         name: "select Sleeve Type",
+        //         value: '',
+        //       },
+        //     ]
+        //   },
+        //   {
+        //     'title': "Searching Details",
+        //     'type': "Search",
+        //   },
+        //   {
+        //     'title': "Fabricator Instructions",
+        //     'type': "Instruction",
+        //   },
+        //   {
+        //     'title': "Production Instructions",
+        //     'type': "Instruction",
+        //   },
+        //   {
+        //     'title': "QC Instructions",
+        //     'type': "Instruction",
+        //   },
 
-        ],
+        // ],
       },
       {
         id: 3,
@@ -540,162 +544,162 @@ export default createStore({
         name: 'Poplin Fabric'
       },
     ],
-    areas: [
-      {
-        title: "Basic Details",
-        type: "TextInput",
-        sections: [
-          {
-            name: "Article No.",
-            value: '',
-          },
+    // areas: [
+    //   {
+    //     title: "Basic Details",
+    //     type: "TextInput",
+    //     sections: [
+    //       {
+    //         name: "Article No.",
+    //         value: '',
+    //       },
 
-          {
-            name: "Catalog Name",
-            value: '',
-          },
+    //       {
+    //         name: "Catalog Name",
+    //         value: '',
+    //       },
 
-          {
-            name: "Whole Selling Price",
-            value: '',
-          },
+    //       {
+    //         name: "Whole Selling Price",
+    //         value: '',
+    //       },
 
-          {
-            name: "MOQ",
-            value: '',
-          },
+    //       {
+    //         name: "MOQ",
+    //         value: '',
+    //       },
 
-          {
-            name: "No. of Pieces",
-            value: '',
-          },
-        ]
-      },
-      {
-        'title': "Cost Pricing",
-        'type': "TextInput",
-        'sections': [
-          {
-            name: "Fabric Cost",
-            value: "",
-          },
-          {
-            name: "Process Outsourcing Cost",
-            value: "",
-          },
-          {
-            name: "Cutting Rate",
-            value: "",
-          },
-          {
-            name: "Single Needle Rate",
-            value: "",
-          },
-          {
-            name: "Assessories Cost",
-            value: "",
-          },
-          {
-            name: "Over Locking Rate",
-            value: "",
-          },
-          {
-            name: "Finishing Rate",
-            value: "",
-          },
-          {
-            name: "Packaging Rate",
-            value: "",
-          },
-          {
-            name: "Other Cost",
-            value: "",
-          },
-          {
-            name: "Fabricating Rate",
-            value: "",
-          },
+    //       {
+    //         name: "No. of Pieces",
+    //         value: '',
+    //       },
+    //     ]
+    //   },
+    //   {
+    //     'title': "Cost Pricing",
+    //     'type': "TextInput",
+    //     'sections': [
+    //       {
+    //         name: "Fabric Cost",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Process Outsourcing Cost",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Cutting Rate",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Single Needle Rate",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Assessories Cost",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Over Locking Rate",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Finishing Rate",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Packaging Rate",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Other Cost",
+    //         value: "",
+    //       },
+    //       {
+    //         name: "Fabricating Rate",
+    //         value: "",
+    //       },
 
-        ]
-      },
-      {
-        'title': "Color Variations",
-        'type': "ColorAdd",
-      },
-      {
-        'title': "Size Variations",
-        'type': "SizeAdd",
-      },
-      {
-        'title': "Fabric Detials",
-        'type': "TextInput",
-        'sections': [
-          {
-            name: "select Fabric",
-            value: '',
-          },
-          {
-            name: "Pana (Inch)",
-            value: '',
-          },
-          {
-            name: "FC / Unit",
-            value: '',
-          },
-          {
-            name: "Unit",
-            value: '',
-          },
-        ]
-      },
-      {
-        'title': "Attributes",
-        'type': "TextInput",
-        'sections': [
-          {
-            name: "Select Stretchability",
-            value: '',
-          },
-          {
-            name: "Select Occasion",
-            value: '',
-          },
-          {
-            name: "Select Pattern",
-            value: '',
-          },
-          {
-            name: "Select Neckline",
-            value: '',
-          },
-          {
-            name: "select Length Type",
-            value: '',
-          },
-          {
-            name: "select Sleeve Type",
-            value: '',
-          },
-        ]
-      },
-      {
-        'title': "Searching Details",
-        'type': "Search",
-      },
-      {
-        'title': "Fabricator Instructions",
-        'type': "Instruction",
-      },
-      {
-        'title': "Production Instructions",
-        'type': "Instruction",
-      },
-      {
-        'title': "QC Instructions",
-        'type': "Instruction",
-      },
+    //     ]
+    //   },
+    //   {
+    //     'title': "Color Variations",
+    //     'type': "ColorAdd",
+    //   },
+    //   {
+    //     'title': "Size Variations",
+    //     'type': "SizeAdd",
+    //   },
+    //   {
+    //     'title': "Fabric Detials",
+    //     'type': "TextInput",
+    //     'sections': [
+    //       {
+    //         name: "select Fabric",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "Pana (Inch)",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "FC / Unit",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "Unit",
+    //         value: '',
+    //       },
+    //     ]
+    //   },
+    //   {
+    //     'title': "Attributes",
+    //     'type': "TextInput",
+    //     'sections': [
+    //       {
+    //         name: "Select Stretchability",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "Select Occasion",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "Select Pattern",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "Select Neckline",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "select Length Type",
+    //         value: '',
+    //       },
+    //       {
+    //         name: "select Sleeve Type",
+    //         value: '',
+    //       },
+    //     ]
+    //   },
+    //   {
+    //     'title': "Searching Details",
+    //     'type': "Search",
+    //   },
+    //   {
+    //     'title': "Fabricator Instructions",
+    //     'type': "Instruction",
+    //   },
+    //   {
+    //     'title': "Production Instructions",
+    //     'type': "Instruction",
+    //   },
+    //   {
+    //     'title': "QC Instructions",
+    //     'type': "Instruction",
+    //   },
 
-    ],
+    // ],
     fabricareas: [
       {
         title: "Basic Details",
@@ -703,22 +707,22 @@ export default createStore({
         sections: [
           {
             name: "Fabric No.",
-            value: '',
+            value: '696969',
           },
 
           {
             name: "Fabric Name",
-            value: '',
+            value: 'Cheese Fabric',
           },
 
           {
             name: "Pana (Inch)",
-            value: '',
+            value: '5',
           },
 
           {
             name: "Length (Inch)",
-            value: '',
+            value: '10.5',
           },
         ]
       },
@@ -728,7 +732,7 @@ export default createStore({
         'sections': [
           {
             name: "Fabric Price / mtr",
-            value: "",
+            value: "600",
           },
         ]
       },
@@ -736,62 +740,6 @@ export default createStore({
         'title': "Color Variations",
         'type': "ColorAdd",
       },
-      // {
-      //   'title': "Size Variations",
-      //   'type': "SizeAdd",
-      // },
-      // {
-      //   'title': "Processing Detials",
-      //   'type': "TextInput",
-      //   'sections': [
-      //     {
-      //       name: "select Fabric",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "Pana (Inch)",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "FC / Unit",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "Unit",
-      //       value: '',
-      //     },
-      //   ]
-      // },
-      // {
-      //   'title': "Attributes",
-      //   'type': "TextInput",
-      //   'sections': [
-      //     {
-      //       name: "Select Stretchability",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "Select Occasion",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "Select Pattern",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "Select Neckline",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "select Length Type",
-      //       value: '',
-      //     },
-      //     {
-      //       name: "select Sleeve Type",
-      //       value: '',
-      //     },
-      //   ]
-      // },
       {
         'title': "Processing Details",
         'type': "Instruction",
@@ -813,7 +761,8 @@ export default createStore({
         'type': "Instruction",
       },
     ],
-    activeProduct: {}
+    activeProduct: {},
+
 
   },
   getters: {

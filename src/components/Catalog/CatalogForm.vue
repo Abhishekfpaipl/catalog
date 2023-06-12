@@ -12,8 +12,6 @@
 
                                     <div class="me-5 rounded-circle d-flex align-items-center justify-content-center"
                                         style="border:1px solid green;height:50px;width: 50px;">{{ index + 1 }}</div>
-
-                                    <!-- <i :class="'bi bi-' + index + '-circle fs-2 text-success'"></i> -->
                                     <i class="bi bi-1-circle fs-2 text-success"></i>
                                     <span>{{ area.title }}</span>
                                 </div>
@@ -82,7 +80,7 @@ export default {
     computed: {
         catalogs() {
             return this.$store.getters.getCatalog
-        }
+        },
         // ...mapState({ areas: (state) => state.areas }),
         // ...mapState({catalogs: (state) => state.catalogs}),
     },

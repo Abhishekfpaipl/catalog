@@ -53,49 +53,49 @@
                         </div>
                         <div class="mt-4 d-flex flex-column">
                             <h5 class="text-center">{{ activeFabric.name }}</h5>
+                            <div v-for="(fa, index) in fabricareas" :key="index">
+                                <div class="accordion" id="accordionExample">
 
-                            <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" :data-bs-target="'#collapseTwo' + index"
+                                                aria-expanded="false" :aria-controls="'collapseTwo' + index">
+                                                {{ fa.title }}
+                                            </button>
+                                        </h2>
+                                        <div :id="'collapseTwo' + index" class="accordion-collapse collapse "
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div v-if="fa.type === 'TextInput'">
+                                                    <div v-for="(sec, key) in fa.sections" :key="key"
+                                                        class="form-floating my-3 d-flex justify-content-between ">
+                                                        <b>{{ sec.name }}</b>
+                                                        <input type="type" name="name" id="floatingInput1" class="text-center"
+                                                            :placeholder="sec.value"
+                                                            style="border:none; border-bottom:1px solid" readonly>
+                                                    </div>
+                                                </div>
+                                                <div v-if="fa.type === 'SizeAdd'">
+                                                    <SizeAdd></SizeAdd>
+                                                </div>
+                                                <div v-if="fa.type === 'ColorAdd'">
+                                                    <ColorAdd></ColorAdd>
 
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            tes
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse show"
-                                        data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <div  class="form-floating ">
-                                                <input value="" type="inline" name="name" class="form-control "
-                                                    id="floatingInput" placeholder="name" required>
-                                                <label for="floatingInput">Fabric no</label>
+                                                </div>
+                                                <div v-if="fa.type === 'Search'">
+                                                    <SearchInput></SearchInput>
+                                                </div>
+                                                <div v-if="fa.type === 'Instruction'">
+                                                    <InstructionInput></InstructionInput>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Accordion Item #3
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default,
-                                        until the collapse plugin adds the appropriate classes that we use to style each
-                                        element. These classes control the overall appearance, as well as the showing and
-                                        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                        our default variables. It's also worth noting that just about any HTML can go within
-                                        the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div> -->
-
-                            <router-link to="/FabricForm">
+                            <router-link to="/FabricForm" class="d-flex justify-content-center mt-3">
                                 <button class=" btn btn-info">Edit</button>
                             </router-link>
                         </div>
@@ -110,13 +110,21 @@
 <script>
 import FabricLinks from './FabricLinks.vue';
 import FabricForm from './FabricForm.vue';
+import InstructionInput from '../InputsType/InstructionInput.vue';
+import ColorAdd from '../InputsType/ColorAdd.vue';
+import SearchInput from '../InputsType/SearchInput.vue';
+import SizeAdd from '../InputsType/SizeAdd.vue';
 
 
 export default {
     components: {
-        FabricLinks,
-        FabricForm
-    },
+    FabricLinks,
+    FabricForm,
+    InstructionInput,
+    ColorAdd,
+    SearchInput,
+    SizeAdd
+},
     data() {
         return {
             publicPath: process.env.BASE_URL,
@@ -128,7 +136,10 @@ export default {
         },
         activeFabric() {
             return this.$store.getters.getActiveFabric
-        }
+        },
+        fabricareas() {
+            return this.$store.getters.getFabricAreas
+        },
 
     },
     methods: {
