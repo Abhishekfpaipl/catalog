@@ -11,6 +11,7 @@ import FabricPO from "../components/Fabric/FabricPO.vue";
 import FabricManage from "../components/Fabric/FabricManage.vue";
 import FabricNotes from "../components/Fabric/FabricNotes.vue";
 import SamplingPage from "../components/BrandSampling/SamplingPage.vue";
+import FabricForm from "@/components/Fabric/FabricForm.vue";
 const routes = [
   {
     path: "/CreatePage",
@@ -71,6 +72,11 @@ const routes = [
     path:"/SamplingPage",
     name:"SamplingPage",
     component: SamplingPage
+  },
+  {
+    path:"/FabricForm",
+    name:"FabricForm",
+    component: FabricForm
   },
  
   

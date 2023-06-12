@@ -93,7 +93,7 @@
                                             data-bs-parent="#accordionFlushAreas">
                                             <div class="accordion-body">
                                                 <div v-if="area.type === 'TextInput'">
-                                                    <div class="form-floating " v-for="(section, key) in area.sections"
+                                                    <div class="form-floating my-3" v-for="(section, key) in area.sections"
                                                         :key="key">
                                                         <input type="text" class="form-control " id="floatingInput"
                                                             :placeholder="section.name" required v-model="section.value">

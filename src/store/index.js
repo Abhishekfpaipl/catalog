@@ -101,6 +101,162 @@ export default createStore({
         oid: '01-20-23188',
         price: '180',
         moq: '700',
+        areas: [
+          {
+            title: "Basic Details",
+            type: "TextInput",
+            sections: [
+              {
+                name: "Article No.",
+                value: '',
+              },
+
+              {
+                name: "Catalog Name",
+                value: '',
+              },
+
+              {
+                name: "Whole Selling Price",
+                value: '',
+              },
+
+              {
+                name: "MOQ",
+                value: '',
+              },
+
+              {
+                name: "No. of Pieces",
+                value: '',
+              },
+            ]
+          },
+          {
+            'title': "Cost Pricing",
+            'type': "TextInput",
+            'sections': [
+              {
+                name: "Fabric Cost",
+                value: "",
+              },
+              {
+                name: "Process Outsourcing Cost",
+                value: "",
+              },
+              {
+                name: "Cutting Rate",
+                value: "",
+              },
+              {
+                name: "Single Needle Rate",
+                value: "",
+              },
+              {
+                name: "Assessories Cost",
+                value: "",
+              },
+              {
+                name: "Over Locking Rate",
+                value: "",
+              },
+              {
+                name: "Finishing Rate",
+                value: "",
+              },
+              {
+                name: "Packaging Rate",
+                value: "",
+              },
+              {
+                name: "Other Cost",
+                value: "",
+              },
+              {
+                name: "Fabricating Rate",
+                value: "",
+              },
+
+            ]
+          },
+          {
+            'title': "Color Variations",
+            'type': "ColorAdd",
+          },
+          {
+            'title': "Size Variations",
+            'type': "SizeAdd",
+          },
+          {
+            'title': "Fabric Detials",
+            'type': "TextInput",
+            'sections': [
+              {
+                name: "select Fabric",
+                value: '',
+              },
+              {
+                name: "Pana (Inch)",
+                value: '',
+              },
+              {
+                name: "FC / Unit",
+                value: '',
+              },
+              {
+                name: "Unit",
+                value: '',
+              },
+            ]
+          },
+          {
+            'title': "Attributes",
+            'type': "TextInput",
+            'sections': [
+              {
+                name: "Select Stretchability",
+                value: '',
+              },
+              {
+                name: "Select Occasion",
+                value: '',
+              },
+              {
+                name: "Select Pattern",
+                value: '',
+              },
+              {
+                name: "Select Neckline",
+                value: '',
+              },
+              {
+                name: "select Length Type",
+                value: '',
+              },
+              {
+                name: "select Sleeve Type",
+                value: '',
+              },
+            ]
+          },
+          {
+            'title': "Searching Details",
+            'type': "Search",
+          },
+          {
+            'title': "Fabricator Instructions",
+            'type': "Instruction",
+          },
+          {
+            'title': "Production Instructions",
+            'type': "Instruction",
+          },
+          {
+            'title': "QC Instructions",
+            'type': "Instruction",
+          },
+
+        ],
       },
       {
         id: 2,
@@ -384,7 +540,7 @@ export default createStore({
       },
 
     ],
-    fabricareas:[
+    fabricareas: [
       {
         title: "Basic Details",
         type: "TextInput",
@@ -500,7 +656,8 @@ export default createStore({
         'title': "QC Instructions",
         'type': "Instruction",
       },
-    ]
+    ],
+    activeProduct: {}
 
   },
   getters: {
@@ -519,11 +676,14 @@ export default createStore({
     getAreas(state) {
       return state.areas;
     },
-    getFabricAreas(state){
+    getFabricAreas(state) {
       return state.fabricareas
     },
     getSampling(state) {
       return state.sampling;
+    },
+    getActiveFabric(state) {
+      return state.activeProduct;
     }
   },
   mutations: {
@@ -538,6 +698,12 @@ export default createStore({
     },
     updateFabricInputValue(state, value) {
       state.fabricareas.sections = value;
+    },
+    selectFabric(state, Fabric) {
+      state.activeProduct = Fabric;
+    },
+    hideFabric(state) {
+      state.activeProduct = {}
     }
   },
   actions: {
@@ -552,6 +718,12 @@ export default createStore({
     },
     setFabricInputValue({ commit }, value) {
       commit('updateFabricInputValue', value);
+    },
+    selectFabric({ commit }, Fabric) {
+      commit('selectFabric', Fabric)
+    },
+    hideFabric({ commit }) {
+      commit('hideFabric')
     }
   },
   modules: {},

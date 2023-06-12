@@ -2,18 +2,18 @@
     <div>
         <div class="">
             <div class="accordion accordion-flush" id="accordionFlushAreas">
-                <div class="accordion-item" v-for="(fabricarea, index) in fabricareas" :key="index">
+                <div class="accordion-item" v-for="(fabricarea, index) in fabricareas" :key="index" >
                     <h2 class="accordion-header">
-                        <div class="accordion-button collapsed" data-bs-toggle="collapse"
+                        <div class="accordion-button collapsed details" data-bs-toggle="collapse"
                             :data-bs-target="'#flush-collapse' + index" aria-expanded="false"
                             :aria-controls="'flush-collapse' + index">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center" >
 
                                 <div class="me-5 rounded-circle d-flex align-items-center justify-content-center"
                                     style="border:1px solid green;height:50px;width: 50px;">{{ index + 1 }}</div>
 
                                 <i class="bi bi-1-circle fs-2 text-success"></i>
-                                <span>{{ fabricarea.title }}</span>
+                                <span class="test" :style="{ color: divColor }">{{ fabricarea.title }}</span>
                             </div>
                         </div>
                     </h2>
@@ -26,6 +26,14 @@
                                         required v-model="section.value" @input="updateStore">
                                     <label for="floatingInput">{{ section.name }}</label>
                                 </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-info" data-bs-toggle="collapse"
+                                        :data-bs-target="'#flush-collapse' + index" aria-expanded="false"
+                                        :aria-controls="'flush-collapse' + index" @click="changeColor">Submit</button>
+                                </div>
+
+                               
+
                             </div>
                             <div v-if="fabricarea.type === 'SizeAdd'">
                                 <SizeAdd></SizeAdd>
@@ -70,7 +78,8 @@ export default {
             colors: [
                 { name: "Color" },
                 { name: "Color" }
-            ]
+            ],
+            divColor: 'initial',
         };
     },
     computed: {
@@ -83,7 +92,10 @@ export default {
         ...mapActions(['setFabricInputValue']),
         updateStore(event) {
             this.setFabricInputValue(event.target.value);
-        }
+        },
+        changeColor() {
+            this.divColor = 'green'; // Change the color to green
+        },
     }
 
 }

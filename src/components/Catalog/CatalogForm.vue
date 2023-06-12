@@ -2,7 +2,8 @@
     <div class="">
         <div class="card">
             <div class="accordion accordion-flush" id="accordionFlushAreas">
-                <div class="accordion-item" v-for="(area, index) in areas" :key="index">
+                <!-- <div class="accordion-item" v-for="(area, index) in areas" :key="index"> -->
+                <div class="accordion-item" v-for="(area, index) in catalogs.areas" :key="index">
                     <h2 class="accordion-header">
                         <div class="accordion-button collapsed" data-bs-toggle="collapse"
                             :data-bs-target="'#flush-collapse' + index" aria-expanded="false"
@@ -78,6 +79,10 @@ export default {
     },
     computed: {
         ...mapState({ areas: (state) => state.areas }),
+        catalogs(){
+            return this.$store.getters.getCatalog
+        }
+        // ...mapState({catalogs: (state) => state.catalogs}),
     },
     methods: {
         addColor() {
