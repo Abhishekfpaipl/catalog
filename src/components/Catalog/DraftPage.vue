@@ -28,15 +28,15 @@
                         <!-- <i class="bi bi-upload fs-3"></i> -->
                     </div>
                 </div>
-
-                <div v-if="Object.keys(activeCatelog).length !== 0">
-                    <div class="offcanvas offcanvas-end show" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
-                        aria-labelledby="staticBackdropLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="staticBackdropLabel">Edit</h5>
-                            <button type="button" class="btn" @click="hideCatelog()"><i class="bi bi-x fs-4"></i></button>
-                        </div>
-                        <!-- <div class="offcanvas-body">
+            </div>
+            <div v-if="Object.keys(activeCatelog).length !== 0">
+                <div class="offcanvas offcanvas-end show" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                    aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="staticBackdropLabel">Edit</h5>
+                        <button type="button" class="btn" @click="hideCatelog()"><i class="bi bi-x fs-4"></i></button>
+                    </div>
+                    <!-- <div class="offcanvas-body">
 
 
 
@@ -94,105 +94,92 @@
 
 
 
-                        <div class="offcanvas-body">
-                            <div class="d-flex justify-content-center">
-                                <img :src="activeCatelog.img" style="height: 400px; width: 300px; object-fit: contain;">
-                            </div>
-                            <div class="mt-4 d-flex flex-column">
-                                <h5 class="text-center">{{ activeCatelog.name }}</h5>
-                                <div v-for="(fa, index) in activeCatelog.areas" :key="index">
-                                    <div class="accordion" id="accordionExample">
+                    <div class="offcanvas-body">
+                        <div class="d-flex justify-content-center">
+                            <img :src="activeCatelog.img" style="height: 400px; width: 300px; object-fit: contain;">
+                        </div>
+                        <div v-for="(d,index) in activeCatelog.designs" :key="index">
+                            {{ d }}
+                        </div>
 
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" :data-bs-target="'#collapseTwo' + index"
-                                                    aria-expanded="false" :aria-controls="'collapseTwo' + index">
-                                                    {{ fa.title }}
-                                                </button>
-                                            </h2>
-                                            <div :id="'collapseTwo' + index" class="accordion-collapse collapse "
-                                                data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <div v-if="fa.type === 'TextInput'">
-                                                        <div v-for="(sec, key) in fa.sections" :key="key"
-                                                            class="form-floating my-3 d-flex justify-content-between ">
-                                                            <p class="m-0">{{ sec.name }}</p>
-                                                            <input type="type" name="name" id="floatingInput1"
-                                                                class="text-center" :placeholder="sec.value"
-                                                                style="border:none; border-bottom:1px solid" readonly>
-                                                        </div>
-                                                    </div>
-                                                    <div v-if="fa.type === 'SizeAdd'">
-                                                        <div class="d-flex my-3 justify-content-between">
-                                                            <p class="m-0">Size</p>
-                                                            <input type="type" name="name" id="floatingInput1"
-                                                                class="text-center" placeholder="XS"
-                                                                style="border:none; border-bottom:1px solid" readonly>
-                                                        </div>
-                                                        <div class="d-flex my-3 justify-content-between">
-                                                            <p class="m-0">Size</p>
-                                                            <input type="type" name="name" id="floatingInput1"
-                                                                class="text-center" placeholder="XL"
-                                                                style="border:none; border-bottom:1px solid" readonly>
-                                                        </div>
-                                                    </div>
-                                                    <div v-if="fa.type === 'ColorAdd'">
-                                                        <div class="d-flex my-3 justify-content-between">
-                                                            <p class="m-0">Colour</p>
-                                                            <input type="type" name="name" id="floatingInput1"
-                                                                class="text-center" placeholder="Red"
-                                                                style="border:none; border-bottom:1px solid" readonly>
-                                                        </div>
-                                                        <div class="d-flex my-3 justify-content-between">
-                                                            <p class="m-0">Colour</p>
-                                                            <input type="type" name="name" id="floatingInput1"
-                                                                class="text-center" placeholder="Green"
-                                                                style="border:none; border-bottom:1px solid" readonly>
-                                                        </div>
+                        <!-- <div class="mt-4 d-flex flex-column">
+                            <h5 class="text-center">{{ activeCatelog.name }}</h5>
+                            <div v-for="(fa, index) in activeCatelog.areas" :key="index">
+                                <div class="accordion" id="accordionExample">
 
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" :data-bs-target="'#collapseTwo' + index"
+                                                aria-expanded="false" :aria-controls="'collapseTwo' + index">
+                                                {{ fa.title }}
+                                            </button>
+                                        </h2>
+                                        <div :id="'collapseTwo' + index" class="accordion-collapse collapse "
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <div v-if="fa.type === 'TextInput'">
+                                                    <div v-for="(sec, key) in fa.sections" :key="key"
+                                                        class="form-floating my-3 d-flex justify-content-between ">
+                                                        <p class="m-0">{{ sec.name }}</p>
+                                                        <input type="type" name="name" id="floatingInput1"
+                                                            class="text-center" :placeholder="sec.value"
+                                                            style="border:none; border-bottom:1px solid" readonly>
                                                     </div>
-                                                    <div v-if="fa.type === 'Search'">
-                                                        <input type="search" placeholder="Search">
+                                                </div>
+                                                <div v-if="fa.type === 'SizeAdd'">
+                                                    <div class="d-flex my-3 justify-content-between">
+                                                        <p class="m-0">Size</p>
+                                                        <input type="type" name="name" id="floatingInput1"
+                                                            class="text-center" placeholder="XS"
+                                                            style="border:none; border-bottom:1px solid" readonly>
                                                     </div>
-                                                    <div v-if="fa.type === 'Instruction'">
-                                                        <div class="mb-3">
-                                                            <label for="exampleFormControlTextarea1"
-                                                                class="form-label">Instruction</label>
-                                                            <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                                rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, doloremque!</textarea>
-                                                        </div>
+                                                    <div class="d-flex my-3 justify-content-between">
+                                                        <p class="m-0">Size</p>
+                                                        <input type="type" name="name" id="floatingInput1"
+                                                            class="text-center" placeholder="XL"
+                                                            style="border:none; border-bottom:1px solid" readonly>
+                                                    </div>
+                                                </div>
+                                                <div v-if="fa.type === 'ColorAdd'">
+                                                    <div class="d-flex my-3 justify-content-between">
+                                                        <p class="m-0">Colour</p>
+                                                        <input type="type" name="name" id="floatingInput1"
+                                                            class="text-center" placeholder="Red"
+                                                            style="border:none; border-bottom:1px solid" readonly>
+                                                    </div>
+                                                    <div class="d-flex my-3 justify-content-between">
+                                                        <p class="m-0">Colour</p>
+                                                        <input type="type" name="name" id="floatingInput1"
+                                                            class="text-center" placeholder="Green"
+                                                            style="border:none; border-bottom:1px solid" readonly>
+                                                    </div>
 
+                                                </div>
+                                                <div v-if="fa.type === 'Search'">
+                                                    <input type="search" placeholder="Search">
+                                                </div>
+                                                <div v-if="fa.type === 'Instruction'">
+                                                    <div class="mb-3">
+                                                        <label for="exampleFormControlTextarea1"
+                                                            class="form-label">Instruction</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                            rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, doloremque!</textarea>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <router-link to="/CatalogForm" class="d-flex justify-content-center mt-3">
-                                    <button class=" btn btn-info">Edit</button>
-                                </router-link>
                             </div>
-                        </div>
-
+                            <router-link to="/CatalogForm" class="d-flex justify-content-center mt-3">
+                                <button class=" btn btn-info">Edit</button>
+                            </router-link>
+                        </div> -->
                     </div>
+
                 </div>
-
-                <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
-                    aria-labelledby="offcanvasExampleLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-
-
-                            <CatalogForm></CatalogForm>
-                        </div>
-                    </div>
-                </div> -->
-
             </div>
         </div>
     </div>
@@ -228,6 +215,9 @@ export default {
         activeCatelog() {
             return this.$store.getters.getCatelog;
         },
+        designs(){
+            return this.$strore.getters.getDesign
+        }
         // areas() {
         //     return this.$store.getters.getAreas
         // }
