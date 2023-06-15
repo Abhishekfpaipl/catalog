@@ -4,18 +4,18 @@
         <!-- <SearchBar></SearchBar> -->
 
         <div class="" style="padding-bottom: 100px;">
-            <div v-for="(Catalog, indexz) in Catalogs" :key="indexz">
-                <div class="d-flex justify-content-between container mt-2" @click="showCatelog(Catalog)">
+            <div v-for="(design , index) in designs" :key="index">
+                <div class="d-flex justify-content-between container mt-2" @click="showCatelog(design)">
                     <div class="d-flex">
-                        <img :src="Catalog.img"
+                        <img :src="design.img"
                             class="rounded-circle border border-3 d-flex justify-content-center align-items-center"
                             style="height:80px; width:80px;object-fit: contain;">
                         <div class="ms-2">
-                            <span class="fw-bold" style="font-size: 12px;">{{ Catalog.oid }}</span>
+                            <span class="fw-bold" style="font-size: 12px;">{{ design.oid }}</span>
                             <div class="d-flex">
-                                <span class="" style="font-size: 12px;">MOQ : {{ Catalog.moq }}</span><span
+                                <span class="" style="font-size: 12px;">MOQ : {{ design.moq }}</span><span
                                     style="font-size: 12px;">|</span>
-                                <span class="" style="font-size: 12px;">Sale Price : {{ Catalog.price }}</span>
+                                <span class="" style="font-size: 12px;">Sale Price : {{ design.price }}</span>
                             </div>
                         </div>
                     </div>
@@ -24,11 +24,10 @@
                             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" @click="showCatelog(Catalog)"></i>
                          -->
                         <i class="bi bi-eye fs-3 me-2"></i>
-
-                        <!-- <i class="bi bi-upload fs-3"></i> -->
                     </div>
                 </div>
             </div>
+
             <div v-if="Object.keys(activeCatelog).length !== 0">
                 <div class="offcanvas offcanvas-end show" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
                     aria-labelledby="staticBackdropLabel">
@@ -98,8 +97,9 @@
                         <div class="d-flex justify-content-center">
                             <img :src="activeCatelog.img" style="height: 400px; width: 300px; object-fit: contain;">
                         </div>
-                        <div v-for="(d,index) in activeCatelog.designs" :key="index">
-                            {{ d }}
+                        <!-- {{ activeCatelog.oid }} -->
+                        <div v-for="(d,index) in activeCatelog.sections" :key="index">
+                            {{ d.value }}
                         </div>
 
                         <!-- <div class="mt-4 d-flex flex-column">
@@ -216,7 +216,7 @@ export default {
             return this.$store.getters.getCatelog;
         },
         designs(){
-            return this.$strore.getters.getDesign
+            return this.$store.getters.getDesign
         }
         // areas() {
         //     return this.$store.getters.getAreas
@@ -224,8 +224,8 @@ export default {
 
     },
     methods: {
-        showCatelog(catelog) {
-            return this.$store.dispatch('selectCatelog', catelog);
+        showCatelog(design) {
+            return this.$store.dispatch('selectCatelog', design);
         },
         hideCatelog() {
             return this.$store.dispatch('hideCatelog');

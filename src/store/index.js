@@ -2,98 +2,98 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    lists: [
-      {
-        id: 1,
-        img: "images/c1.jpg",
-        tag: "#23269",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 2,
-        img: "images/c2.jpg",
-        tag: "#23252",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 3,
-        img: "images/c3.jpg",
-        tag: "#232234",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 4,
-        img: "images/c4.jpg",
-        tag: "#232123",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 5,
-        img: "images/c5.jpg",
-        tag: "#232565",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 6,
-        img: "images/c6.jpg",
-        tag: "#69646",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 7,
-        img: "images/c1.jpg",
-        tag: "#232565",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 8,
-        img: "images/c2.jpg",
-        tag: "#69646",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-      {
-        id: 9,
-        img: "images/c3.jpg",
-        tag: "#69646",
-        name: "1/1 Top",
-        sp: "85",
-        panna: "59 Inch | 1.4986 Mtr",
-        fc: "115 Grm",
-        stag: "23269, 23269, Massa Rib, 1/1 top"
-      },
-    ],
+    // lists: [
+    //   {
+    //     id: 1,
+    //     img: "images/c1.jpg",
+    //     tag: "#23269",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 2,
+    //     img: "images/c2.jpg",
+    //     tag: "#23252",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 3,
+    //     img: "images/c3.jpg",
+    //     tag: "#232234",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 4,
+    //     img: "images/c4.jpg",
+    //     tag: "#232123",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 5,
+    //     img: "images/c5.jpg",
+    //     tag: "#232565",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 6,
+    //     img: "images/c6.jpg",
+    //     tag: "#69646",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 7,
+    //     img: "images/c1.jpg",
+    //     tag: "#232565",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 8,
+    //     img: "images/c2.jpg",
+    //     tag: "#69646",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    //   {
+    //     id: 9,
+    //     img: "images/c3.jpg",
+    //     tag: "#69646",
+    //     name: "1/1 Top",
+    //     sp: "85",
+    //     panna: "59 Inch | 1.4986 Mtr",
+    //     fc: "115 Grm",
+    //     stag: "23269, 23269, Massa Rib, 1/1 top"
+    //   },
+    // ],
     areas: [
       {
         title: 'active',
@@ -141,52 +141,52 @@ export default createStore({
         'sections': [
           {
             name: "Fabric Cost",
-            slug:'fabric_cost',
+            slug: 'fabric_cost',
             value: "",
           },
           {
             name: "Processing",
-            slug:'processing',
+            slug: 'processing',
             value: "",
           },
           {
             name: "Cutting",
-            slug:'cutting',
+            slug: 'cutting',
             value: "",
           },
           {
             name: "Single Needle",
-            slug:'single_needle',
+            slug: 'single_needle',
             value: "",
           },
           {
             name: "Assessories ",
-            slug:'assessories',
+            slug: 'assessories',
             value: "",
           },
           {
             name: "Over Locking ",
-            slug:'over_locking',
+            slug: 'over_locking',
             value: "",
           },
           {
             name: "Finishing ",
-            slug:'finishing',
+            slug: 'finishing',
             value: "",
           },
           {
             name: "Packaging ",
-            slug:'packaging',
+            slug: 'packaging',
             value: "",
           },
           {
             name: "Other Cost",
-            slug:'other_cost',
+            slug: 'other_cost',
             value: "",
           },
           {
             name: "Fabricating Rate",
-            slug:'fabricating_rate',
+            slug: 'fabricating_rate',
             value: "",
           },
 
@@ -195,34 +195,33 @@ export default createStore({
       {
         'title': "Color Variations",
         'type': "ColorAdd",
-        slug:'color_variations'
       },
-      // {
-      //   'title': "Size Variations",
-      //   'type': "SizeAdd",
-      // },
+      {
+        'title': "Size Variations",
+        'type': "SizeAdd",
+      },
       {
         'title': "Fabric Detials",
         'type': "TextInput",
         'sections': [
           {
             name: "Select Fabric",
-            slug:'select_fabric',
+            slug: 'select_fabric',
             value: "",
           },
           {
             name: "Pana (Inch)",
-            slug:'pana',
+            slug: 'pana',
             value: "",
           },
           {
             name: "FC / Unit",
-            slug:'fc',
+            slug: 'fc',
             value: "",
           },
           {
             name: "Unit",
-            slug:'unit',
+            slug: 'unit',
             value: "",
           },
         ]
@@ -233,52 +232,52 @@ export default createStore({
         'sections': [
           {
             name: " Stretchability",
-            slug:'stretchability',
+            slug: 'stretchability',
             value: '',
           },
           {
             name: " Occasion",
-            slug:'occasion',
+            slug: 'occasion',
             value: '',
           },
           {
             name: " Pattern",
-            slug:'pattern',
+            slug: 'pattern',
             value: '',
           },
           {
             name: " Neckline",
-            slug:'neckline',
+            slug: 'neckline',
             value: '',
           },
           {
             name: " Length Type",
-            slug:'length_type',
+            slug: 'length_type',
             value: '',
           },
           {
             name: " Sleeve Type",
-            slug:'sleeve_type',
+            slug: 'sleeve_type',
             value: '',
           },
         ]
       },
-      // {
-      //   'title': "Searching Details",
-      //   'type': "Search",
-      // },
-      // {
-      //   'title': "Fabricator Instructions",
-      //   'type': "Instruction",
-      // },
-      // {
-      //   'title': "Production Instructions",
-      //   'type': "Instruction",
-      // },
-      // {
-      //   'title': "QC Instructions",
-      //   'type': "Instruction",
-      // },
+      {
+        'title': "Searching Details",
+        'type': "Search",
+      },
+      {
+        'title': "Fabricator Instructions",
+        'type': "Instruction",
+      },
+      {
+        'title': "Production Instructions",
+        'type': "Instruction",
+      },
+      {
+        'title': "QC Instructions",
+        'type': "Instruction",
+      },
 
     ],
     Catalogs: [
@@ -350,72 +349,73 @@ export default createStore({
 
     // ],
     designs: [
-      [
-        {
-          "title": "Basic Details",
-          "type": "TextInput",
-          sections: [
-            {
-              name: "Article No.",
-              slug: "article_no",
-              value: "21201"
-            },
-            {
-              name: "Catalog Name",
-              slug: "catalog_name",
-              value: "shirt"
-            },
-            {
-              name: "Selling Price",
-              slug: "selling_price",
-              value: "200"
-            },
-            {
-              name: "MOQ",
-              slug: "moq",
-              value: "12"
-            },
-            {
-              name: "No. of Pieces",
-              slug: "pieces",
-              value: "6"
-            }
-          ]
-        }
-      ],
-      // [
-      //   {
-      //     "title": "Basic Details",
-      //     "type": "TextInput",
-      //     "sections": [
-      //       {
-      //         "name": "Article No.",
-      //         "slug": "article_no",
-      //         "value": "21201"
-      //       },
-      //       {
-      //         "name": "Catalog Name",
-      //         "slug": "catalog_name",
-      //         "value": "shirt"
-      //       },
-      //       {
-      //         "name": "Selling Price",
-      //         "slug": "selling_price",
-      //         "value": "200"
-      //       },
-      //       {
-      //         "name": "MOQ",
-      //         "slug": "moq",
-      //         "value": "12"
-      //       },
-      //       {
-      //         "name": "No. of Pieces",
-      //         "slug": "pieces",
-      //         "value": "6"
-      //       }
-      //     ]
-      //   }
-      // ]
+      {
+        oid: '12321',
+        img: 'https://img101.urbanic.com/v1/goods-pic/626c54fdfd92417e835c5ef39e8fc920UR_w540_h720_q85.webp',
+        "title": "Basic Details",
+        "type": "TextInput",
+        sections: [
+          {
+            name: "Article No.",
+            slug: "article_no",
+            value: "21201"
+          },
+          {
+            name: "Catalog Name",
+            slug: "catalog_name",
+            value: "shirt"
+          },
+          {
+            name: "Selling Price",
+            slug: "selling_price",
+            value: "200"
+          },
+          {
+            name: "MOQ",
+            slug: "moq",
+            value: "12"
+          },
+          {
+            name: "No. of Pieces",
+            slug: "pieces",
+            value: "6"
+          }
+        ]
+      },
+      {
+        oid: '01-20-23189',
+        img: 'https://img101.urbanic.com/v1/goods-pic/9d3710a05d0a46dabf4c4c9d8b566df4UR_w540_h720_q85.webp',
+        "title": "Basic Details",
+        "type": "TextInput",
+        "sections": [
+          {
+            "name": "Article No.",
+            "slug": "article_no",
+            "value": "21201"
+          },
+          {
+            "name": "Catalog Name",
+            "slug": "catalog_name",
+            "value": "shirt"
+          },
+          {
+            "name": "Selling Price",
+            "slug": "selling_price",
+            "value": "200"
+          },
+          {
+            "name": "MOQ",
+            "slug": "moq",
+            "value": "12"
+          },
+          {
+            "name": "No. of Pieces",
+            "slug": "pieces",
+            "value": "6"
+          }
+        ]
+      }
+
     ],
     // Catalogs: [
     //   {
@@ -1095,9 +1095,9 @@ export default createStore({
     getFabric(state) {
       return state.Fabrics;
     },
-    getLists(state) {
-      return state.lists;
-    },
+    // getLists(state) {
+    //   return state.lists;
+    // },
     getCatelog(state) {
       return state.activeCatelog;
     },
@@ -1113,13 +1113,13 @@ export default createStore({
     getActiveFabric(state) {
       return state.activeProduct;
     },
-    getDesign(state){
+    getDesign(state) {
       return state.designs
     }
   },
   mutations: {
-    selectCatelog(state, catelog) {
-      state.activeCatelog = catelog;
+    selectCatelog(state, design) {
+      state.activeCatelog = design;
     },
     hideCatelog(state) {
       state.activeCatelog = {};
@@ -1141,8 +1141,8 @@ export default createStore({
     }
   },
   actions: {
-    selectCatelog({ commit }, catelog) {
-      commit("selectCatelog", catelog);
+    selectCatelog({ commit }, design) {
+      commit("selectCatelog", design);
     },
     hideCatelog({ commit }) {
       commit("hideCatelog");
@@ -1164,4 +1164,4 @@ export default createStore({
     }
   },
   modules: {},
-});
+});    

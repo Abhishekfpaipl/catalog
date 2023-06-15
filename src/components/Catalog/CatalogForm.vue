@@ -38,7 +38,7 @@
                             <div v-if="area.type === 'ColorAdd'">
                                 <ColorAdd></ColorAdd>
                             </div>
-                            <!-- <div v-if="area.type === 'SizeAdd'">
+                            <div v-if="area.type === 'SizeAdd'">
                                 <SizeAdd></SizeAdd>
                             </div>
                             <div v-if="area.type === 'Search'">
@@ -46,7 +46,7 @@
                             </div>
                             <div v-if="area.type === 'Instruction'">
                                 <InstructionInput></InstructionInput>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,10 +69,10 @@
 </template>
 
 <script>
-// import SizeAdd from '../InputsType/SizeAdd.vue';
+import SizeAdd from '../InputsType/SizeAdd.vue';
 import ColorAdd from '../InputsType/ColorAdd.vue';
-// import SearchInput from '../InputsType/SearchInput.vue';
-// import InstructionInput from '../InputsType/InstructionInput.vue';
+import SearchInput from '../InputsType/SearchInput.vue';
+import InstructionInput from '../InputsType/InstructionInput.vue';
 import { mapActions } from 'vuex';
 // import { mapState } from 'vuex';
 
@@ -92,10 +92,10 @@ export default {
         }
     },
     components: {
-    //     SizeAdd,
+        SizeAdd,
         ColorAdd,
-    //     SearchInput,
-    //     InstructionInput
+        SearchInput,
+        InstructionInput
     },
     mounted() {
 
