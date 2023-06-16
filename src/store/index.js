@@ -197,10 +197,10 @@ export default createStore({
         'type': "ColorAdd",
         slug:'color_variations'
       },
-      // {
-      //   'title': "Size Variations",
-      //   'type': "SizeAdd",
-      // },
+      {
+        'title': "Size Variations",
+        'type': "SizeAdd",
+      },
       {
         'title': "Fabric Detials",
         'type': "TextInput",
@@ -263,22 +263,22 @@ export default createStore({
           },
         ]
       },
-      // {
-      //   'title': "Searching Details",
-      //   'type': "Search",
-      // },
-      // {
-      //   'title': "Fabricator Instructions",
-      //   'type': "Instruction",
-      // },
-      // {
-      //   'title': "Production Instructions",
-      //   'type': "Instruction",
-      // },
-      // {
-      //   'title': "QC Instructions",
-      //   'type': "Instruction",
-      // },
+      {
+        'title': "Searching Details",
+        'type': "Search",
+      },
+      {
+        'title': "Fabricator Instructions",
+        'type': "Instruction",
+      },
+      {
+        'title': "Production Instructions",
+        'type': "Instruction",
+      },
+      {
+        'title': "QC Instructions",
+        'type': "Instruction",
+      },
 
     ],
     Catalogs: [
@@ -326,97 +326,97 @@ export default createStore({
       },
 
     ],
-    // designs: [
-    //   {
-    //     id: 1,
-    //     img: 'https://img101.urbanic.com/v1/goods-pic/626c54fdfd92417e835c5ef39e8fc920UR_w540_h720_q85.webp',
-    //     oid: '01-20-23188',
-    //     price: '180',
-    //     moq: '700',
-    //     name: "Black Long Dress",
-    //     slug: "article_no",
-    //     value: "21201"
-    //   },
-    //   {
-    //     id: 2,
-    //     img: 'https://img101.urbanic.com/v1/goods-pic/9d3710a05d0a46dabf4c4c9d8b566df4UR_w540_h720_q85.webp',
-    //     oid: '01-20-23189',
-    //     price: '190',
-    //     moq: '800',
-    //     name: "Black Dress",
-    //     slug: "catalog_name",
-    //     value: "shirt"
-    //   },
-
-    // ],
     designs: [
-      [
-        {
-          "title": "Basic Details",
-          "type": "TextInput",
-          sections: [
-            {
-              name: "Article No.",
-              slug: "article_no",
-              value: "21201"
-            },
-            {
-              name: "Catalog Name",
-              slug: "catalog_name",
-              value: "shirt"
-            },
-            {
-              name: "Selling Price",
-              slug: "selling_price",
-              value: "200"
-            },
-            {
-              name: "MOQ",
-              slug: "moq",
-              value: "12"
-            },
-            {
-              name: "No. of Pieces",
-              slug: "pieces",
-              value: "6"
-            }
-          ]
-        }
-      ],
-      // [
-      //   {
-      //     "title": "Basic Details",
-      //     "type": "TextInput",
-      //     "sections": [
-      //       {
-      //         "name": "Article No.",
-      //         "slug": "article_no",
-      //         "value": "21201"
-      //       },
-      //       {
-      //         "name": "Catalog Name",
-      //         "slug": "catalog_name",
-      //         "value": "shirt"
-      //       },
-      //       {
-      //         "name": "Selling Price",
-      //         "slug": "selling_price",
-      //         "value": "200"
-      //       },
-      //       {
-      //         "name": "MOQ",
-      //         "slug": "moq",
-      //         "value": "12"
-      //       },
-      //       {
-      //         "name": "No. of Pieces",
-      //         "slug": "pieces",
-      //         "value": "6"
-      //       }
-      //     ]
-      //   }
-      // ]
+      {
+        id: 1,
+        img: 'https://img101.urbanic.com/v1/goods-pic/626c54fdfd92417e835c5ef39e8fc920UR_w540_h720_q85.webp',
+        oid: '01-20-23188',
+        price: '180',
+        moq: '700',
+        name: "Black Long Dress",
+        slug: "article_no",
+        value: "21201"
+      },
+      {
+        id: 2,
+        img: 'https://img101.urbanic.com/v1/goods-pic/9d3710a05d0a46dabf4c4c9d8b566df4UR_w540_h720_q85.webp',
+        oid: '01-20-23189',
+        price: '190',
+        moq: '800',
+        name: "Black Dress",
+        slug: "catalog_name",
+        value: "shirt"
+      },
+
     ],
+    // designs: [
+    //   [
+    //     {
+    //       "title": "Basic Details",
+    //       "type": "TextInput",
+    //       sections: [
+    //         {
+    //           name: "Article No.",
+    //           slug: "article_no",
+    //           value: "21201"
+    //         },
+    //         {
+    //           name: "Catalog Name",
+    //           slug: "catalog_name",
+    //           value: "shirt"
+    //         },
+    //         {
+    //           name: "Selling Price",
+    //           slug: "selling_price",
+    //           value: "200"
+    //         },
+    //         {
+    //           name: "MOQ",
+    //           slug: "moq",
+    //           value: "12"
+    //         },
+    //         {
+    //           name: "No. of Pieces",
+    //           slug: "pieces",
+    //           value: "6"
+    //         }
+    //       ]
+    //     }
+    //   ],
+    //   // [
+    //   //   {
+    //   //     "title": "Basic Details",
+    //   //     "type": "TextInput",
+    //   //     "sections": [
+    //   //       {
+    //   //         "name": "Article No.",
+    //   //         "slug": "article_no",
+    //   //         "value": "21201"
+    //   //       },
+    //   //       {
+    //   //         "name": "Catalog Name",
+    //   //         "slug": "catalog_name",
+    //   //         "value": "shirt"
+    //   //       },
+    //   //       {
+    //   //         "name": "Selling Price",
+    //   //         "slug": "selling_price",
+    //   //         "value": "200"
+    //   //       },
+    //   //       {
+    //   //         "name": "MOQ",
+    //   //         "slug": "moq",
+    //   //         "value": "12"
+    //   //       },
+    //   //       {
+    //   //         "name": "No. of Pieces",
+    //   //         "slug": "pieces",
+    //   //         "value": "6"
+    //   //       }
+    //   //     ]
+    //   //   }
+    //   // ]
+    // ],
     // Catalogs: [
     //   {
     //     id: 1,
@@ -1085,6 +1085,7 @@ export default createStore({
       },
     ],
     activeProduct: {},
+    activeDesign:{}
 
 
   },
@@ -1113,17 +1114,31 @@ export default createStore({
     getActiveFabric(state) {
       return state.activeProduct;
     },
+    // getDesign:(state) => (designsId) =>{
+    //   let index = state.array.findIndex
+    //   (design => designId == designsId)
+    //   return state.designs[index]
+    // },
     getDesign(state){
       return state.designs
-    }
+    },
+    getActiveDesign(state) {
+      return state.activeDesign;
+    },
   },
   mutations: {
-    selectCatelog(state, catelog) {
-      state.activeCatelog = catelog;
+    selectDesign(state, design) {
+      state.activeDesign = design;
     },
-    hideCatelog(state) {
-      state.activeCatelog = {};
+    hideDesign(state) {
+      state.activeDesign = {};
     },
+    // selectCatelog(state, catelog) {
+    //   state.activeCatelog = catelog;
+    // },
+    // hideCatelog(state) {
+    //   state.activeCatelog = {};
+    // },
     updateInputValue(state, value) {
       state.areas.sections = value;
     },
@@ -1141,12 +1156,18 @@ export default createStore({
     }
   },
   actions: {
-    selectCatelog({ commit }, catelog) {
-      commit("selectCatelog", catelog);
+    selectDesign({ commit }, design) {
+      commit("selectDesign", design);
     },
-    hideCatelog({ commit }) {
-      commit("hideCatelog");
+    hideDesign({ commit }) {
+      commit("hideDesign");
     },
+    // selectCatelog({ commit }, catelog) {
+    //   commit("selectCatelog", catelog);
+    // },
+    // hideCatelog({ commit }) {
+    //   commit("hideCatelog");
+    // },
     setInputValue({ commit }, value) {
       commit('updateInputValue', value);
     },
