@@ -38,6 +38,9 @@
                             <div v-if="area.type === 'ColorAdd'">
                                 <ColorAdd></ColorAdd>
                             </div>
+                            <div v-if="area.type === 'MeasurementAdd'">
+                                <MeasurementAdd></MeasurementAdd>
+                            </div>
                             <div v-if="area.type === 'SizeAdd'">
                                 <SizeAdd></SizeAdd>
                             </div>
@@ -53,12 +56,22 @@
             </div>
         </div>
         <div class="border p-2 mt-3 rounded mb-3">
-            <label for="formFile" class="form-label">Upload Catalog Image</label>
+            <label for="formFile" class="form-label">Upload Primary Image</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="border p-2 mt-3 rounded mb-3">
+            <label for="formFile" class="form-label">Upload Secondary Images</label>
             <input class="form-control" type="file" id="formFile">
         </div>
         <div class="border p-2 rounded mb-3">
             <div class="">
-                <label for="formFile" class="form-label">Upload CAD</label>
+                <label for="formFile" class="form-label">Upload Sourcing CAD</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+        </div>
+        <div class="border p-2 rounded mb-3">
+            <div class="">
+                <label for="formFile" class="form-label">Upload Production CAD</label>
                 <input class="form-control" type="file" id="formFile">
             </div>
         </div>
@@ -74,6 +87,7 @@ import ColorAdd from '../InputsType/ColorAdd.vue';
 import SearchInput from '../InputsType/SearchInput.vue';
 import InstructionInput from '../InputsType/InstructionInput.vue';
 import { mapActions } from 'vuex';
+import MeasurementAdd from '../InputsType/MeasurementAdd.vue';
 // import { mapState } from 'vuex';
 
 export default {
@@ -92,11 +106,12 @@ export default {
         }
     },
     components: {
-        SizeAdd,
-        ColorAdd,
-        SearchInput,
-        InstructionInput
-    },
+    SizeAdd,
+    ColorAdd,
+    SearchInput,
+    InstructionInput,
+    MeasurementAdd
+},
     mounted() {
 
         this.newAreas = this.$store.getters.getAreas

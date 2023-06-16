@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <TextInputs class="w-100 " name="Select Deafult Fabricator" type="text" design="floating"></TextInputs>
+            <!-- <TextInputs class="w-100 " name="Select Deafult Fabricator" type="text" design="floating"></TextInputs> -->
 
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Instruction</label>
@@ -24,14 +24,15 @@ export default {
     data() {
         return {
             instructions: [
-                { name: "Instruction" },
-                { name: "Instruction" },
+                { name: "Instruction 1" },
+                { name: "Instruction 2" },
             ],
         };
     },
     methods: {
         addIns() {
-            this.instructions.push({ name: "Instruction" });
+            const newIndex = this.instructions.length;
+            this.instructions.push({ name: `Instruction ${newIndex + 1}` });
         },
     },
     components: { TextInputs }

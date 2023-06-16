@@ -197,6 +197,10 @@ export default createStore({
         'type': "ColorAdd",
       },
       {
+        'title':'Measurements',
+        'type':'MeasurementAdd',
+      },
+      {
         'title': "Size Variations",
         'type': "SizeAdd",
       },
@@ -267,15 +271,19 @@ export default createStore({
         'type': "Search",
       },
       {
-        'title': "Fabricator Instructions",
+        'title': "Production Plans",
         'type': "Instruction",
       },
       {
-        'title': "Production Instructions",
+        'title': "Production Guidelines",
         'type': "Instruction",
       },
       {
-        'title': "QC Instructions",
+        'title': "QC Plans",
+        'type': "Instruction",
+      },
+      {
+        'title': "QC Guidelines",
         'type': "Instruction",
       },
 

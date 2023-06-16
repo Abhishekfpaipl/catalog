@@ -18,15 +18,21 @@ export default {
     data() {
         return {
             colors: [
-                { name: "Color", slug:'color', value:'' },
-                { name: "Color", slug:'color', value:'' },
+                { name: "Color 1", slug: 'color', value: '' },
+                { name: "Color 2", slug: 'color', value: '' },
             ],
         };
     },
     methods: {
+        // addColor() {
+        //     this.colors.push({ name: "Color", slug: 'Color' });
+        // },
         addColor() {
-            this.colors.push({ name: "Color", slug:'Color' });
+            const newIndex = this.colors.length;
+            this.colors.push({ name: `Color ${newIndex + 1}` ,  slug: 'Color'});
         },
+
+
         ...mapActions(['setInputValue']),
         updateStore(event) {
             this.setInputValue(event.target.value);
