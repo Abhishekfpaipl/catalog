@@ -13,7 +13,6 @@ import FabricNotes from "../components/Fabric/FabricNotes.vue";
 import SamplingPage from "../components/BrandSampling/SamplingPage.vue";
 import FabricForm from "@/components/Fabric/FabricForm.vue";
 import CatalogForm from "@/components/Catalog/CatalogForm.vue";
-import DetailPage from "@/components/Catalog/DetailPage.vue";
 const routes = [
   {
     path: "/CreatePage",
@@ -35,11 +34,7 @@ const routes = [
     name: "DraftPage",
     component: DraftPage,
   },
-  {
-    path: "/DetailPage/:designId",
-    name: "DetailPage",
-    component: DetailPage,
-  },
+   
   {
     path: "/NotesPage",
     name: "NotesPage",
